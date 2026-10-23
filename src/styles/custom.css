@@ -1,0 +1,31 @@
+/* Civilis: forest-and-stone visual system. Legible in both themes. */
+:root {
+  --sl-color-accent-low: #193b2e;
+  --sl-color-accent: #7ee4ab;
+  --sl-color-accent-high: #ccf9db;
+  --sl-color-bg: #0b1410;
+  --sl-color-bg-nav: #0d1a13;
+  --sl-color-bg-sidebar: #101c16;
+  --sl-color-hairline: #2b4134;
+  --sl-color-text-accent: #9beab8;
+}
+:root[data-theme='light'] {
+  --sl-color-accent-low: #d9efe1;
+  --sl-color-accent: #19633c;
+  --sl-color-accent-high: #0d3924;
+  --sl-color-bg: #f6f8f4;
+  --sl-color-bg-nav: #f9fbf7;
+  --sl-color-bg-sidebar: #eff4ed;
+  --sl-color-hairline: #cedbd0;
+  --sl-color-text-accent: #176038;
+}
+.hero h1 { letter-spacing: -.055em; font-weight: 850; }
+.hero .tagline { max-width: 55rem; line-height: 1.55; }
+.hero { padding-top: clamp(3rem, 6vw, 6rem); padding-bottom: clamp(2rem, 5vw, 4rem); }
+.sl-markdown-content h2 { letter-spacing: -.024em; }
+.card { border-radius: .85rem; }
+[data-theme='dark'] .hero {
+  background: radial-gradient(ellipse at 50% 0%, rgba(64,138,82,.20), transparent 62%);
+}
+.sl-markdown-content table { font-size: .93em; }
+.sl-markdown-content td, .sl-markdown-content th { vertical-align: top; }
