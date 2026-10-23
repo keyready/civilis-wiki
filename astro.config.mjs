@@ -5,10 +5,8 @@ export default defineConfig({
   integrations: [
     starlight({
       title: 'Civilis',
-      description: 'Civilis — мод для Minecraft 26.2: автономные деревни, профессии, экономика и развитие городов.',
-      locales: {
-        root: { label: 'Русский', lang: 'ru-RU' },
-      },
+      description: 'Civilis — живые деревни Minecraft: жители работают, строят и развивают поселения.',
+      locales: { root: { label: 'Русский', lang: 'ru-RU' } },
       favicon: '/favicon.svg',
       customCss: ['./src/styles/custom.css'],
       social: [
@@ -16,38 +14,21 @@ export default defineConfig({
       ],
       sidebar: [
         { label: 'Главная', link: '/' },
+        { label: 'Начало игры', items: ['installation', 'guide/first-village', 'faq'] },
         {
-          label: 'Знакомство',
-          items: ['about', 'installation', 'guide/first-village', 'faq'],
+          label: 'Жизнь деревни',
+          items: ['about', 'mechanics/professions', 'mechanics/economy', 'mechanics/housing'],
         },
         {
-          label: 'Жизнь города',
-          items: [
-            'mechanics/professions',
-            'mechanics/economy',
-            'mechanics/housing',
-            'mechanics/visuals',
-          ],
+          label: 'Хозяйство',
+          items: ['mechanics/forestry', 'mechanics/farming', 'mechanics/livestock', 'mechanics/planning'],
         },
-        {
-          label: 'Работа и строительство',
-          items: [
-            'mechanics/forestry',
-            'mechanics/farming',
-            'mechanics/livestock',
-            'mechanics/planning',
-            'mechanics/quarry',
-            'mechanics/walls',
-          ],
-        },
+        { label: 'Строительство и добыча', items: ['mechanics/quarry', 'mechanics/walls'] },
         {
           label: 'Справочник',
-          items: ['guide/commands', 'guide/troubleshooting', 'guide/principles'],
+          items: ['guide/commands', 'guide/troubleshooting', 'mechanics/visuals', 'guide/principles'],
         },
-        {
-          label: 'Разработка',
-          items: ['roadmap', 'milestones', 'changelog'],
-        },
+        { label: 'Развитие Civilis', items: ['roadmap', 'changelog', 'milestones'] },
       ],
     }),
   ],
